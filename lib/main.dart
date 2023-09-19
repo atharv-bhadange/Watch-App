@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:wear/wear.dart';
+import 'package:wearable_rotary/wearable_rotary.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +40,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  late final StreamSubscription<RotaryEvent> _rotarySubscription;
+
   int _counter = 0;
 
   void _incrementCounter() {
@@ -49,6 +54,26 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter--;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _rotarySubscription = rotaryEvents.listen(handleRotaryEvent);
+  }
+
+  void handleRotaryEvent(RotaryEvent event) {
+    if (event.direction == RotaryDirection.clockwise) {
+      _incrementCounter();
+    } else {
+      _decrementCounter();
+    }
+  }
+
+  @override
+  void dispose() {
+    _rotarySubscription.cancel();
+    super.dispose();
   }
 
   @override
