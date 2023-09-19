@@ -14,16 +14,18 @@ A few resources to get you started if this is your first WearOS project:
 
 ## Screenshots
 ### Active Mode
-<img src="https://github.com/atharv-bhadange/Watch-App/assets/65965314/fba12dda-c809-4bf2-b4ad-69f955f0e131">  
+<img src="https://github.com/atharv-bhadange/Watch-App/assets/65965314/c5fce8e6-4082-46a3-b0b1-2c459f721c81">  
+
 
 ### Ambient Mode
-<img src="https://github.com/atharv-bhadange/Watch-App/assets/65965314/a66f730c-ce5d-479f-92ed-a833cabfa99e" width=50% height=50%> 
+<img src="https://github.com/atharv-bhadange/Watch-App/assets/65965314/463bd529-026b-404d-b430-79e79cfb1918" width=50% height=50%> 
 
 ## Video
 
 
-https://github.com/atharv-bhadange/Watch-App/assets/65965314/d70ba149-7782-4ba0-bc79-9bd25dc92e68
+https://github.com/atharv-bhadange/Watch-App/assets/65965314/92f508fc-1211-45a2-af1a-106d9179dc69
 
 
-Do drop a ⭐ on the GitHub Repository.
+
+Do drop a ⭐ on the Repo.
 
