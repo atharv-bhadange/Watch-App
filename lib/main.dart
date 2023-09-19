@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wear/wear.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,13 +10,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
+    return AmbientMode(
+      builder: (context, mode, child) {
+        return MaterialApp(
+          title: 'Watch Counter',
+          theme: ThemeData(
+            visualDensity: VisualDensity.compact,
+            colorScheme: mode == WearMode.active
+                ? const ColorScheme.light()
+                : const ColorScheme.dark(),
+            useMaterial3: true,
+          ),
+          home: child,
+        );
+      },
+      child: const MyHomePage(),
     );
   }
 }
